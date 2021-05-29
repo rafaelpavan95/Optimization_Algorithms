@@ -2,6 +2,10 @@
 Algoritmos de Otimização
 
 
+### Algoritmo de Newton-Raphson (Resolução de Fluxo de Carga);
+
+### Método de Pontos Interiores com Filtro e Penalização Senoidal (Solver IPOPT / FPOR);
+
 ### Método de Pontos Interiores Primal-Afim (Programação Linear)
 
 ### Método de Pontos Interiores Dual-Afim (Programação Linear)
