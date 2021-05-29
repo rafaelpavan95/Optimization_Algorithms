@@ -6,9 +6,9 @@ Algoritmos de Otimização
 
 ### Método de Pontos Interiores com Filtro e Penalização Senoidal (Solver IPOPT / FPOR);
 
-### (Método de Pontos Interiores Primal-Afim (Programação Linear))[https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_Linear.m]
+### [Método de Pontos Interiores Primal-Afim (Programação Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_Linear.m)
 
-### (Método de Pontos Interiores Dual-Afim (Programação Linear))[https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_Linear.m]
+### [Método de Pontos Interiores Dual-Afim (Programação Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_Linear.m)
 
 ### Método de Pontos Interiores Primal-Afim (Programação Quadrática)
 
