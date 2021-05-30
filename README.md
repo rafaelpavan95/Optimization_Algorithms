@@ -18,16 +18,16 @@ Algoritmos de Otimização
 
 ### [Método de Pontos Interiores Dual-Afim (Programação Não Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_NaoLinear.m)
 
-
-### Método de Pontos Interiores Primal-Afim Trajetória Central (Programação Linear)
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_Linear_TC.m)
 
 ### Método de Pontos Interiores Dual-Afim Trajetória Central (Programação Linear)
 
-### Método de Pontos Interiores Primal-Afim Trajetória Central (Programação Quadrática)
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Quadrática)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_PPQ_TC.m)
 
 ### Método de Pontos Interiores Dual-Afim Trajetória Central (Programação Quadrática)
 
-### Método de Pontos Interiores Primal-Afim Trajetória Central (Programação Não Linear)
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Não Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_NaoLinear_TC.m)
+
 
 ### Método de Pontos Interiores Dual-Afim Trajetória Central (Programação Não Linear)
 
