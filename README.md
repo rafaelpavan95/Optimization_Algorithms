@@ -26,9 +26,9 @@ Algoritmos de Otimização
 
 ### [Método de Pontos Interiores Dual-Afim Barreira Logarítmica (Programação Quadrática)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_PPQ_TC.m)
 
-### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Não Linear) Despacho Econômico (3 Geradores)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_NaoLinear_TC.m)
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Não Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_NaoLinear_TC.m)
 
 ### [Método de Pontos Interiores Dual-Afim Barreira Logarítmica (Programação Não Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_NaoLinear_TC.m)
 
-### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Não Linear)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_NaoLinear_TC_Despacho.m)
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Não Linear) - Despacho Econômico (3 Geradores)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_NaoLinear_TC_Despacho.m)
 
