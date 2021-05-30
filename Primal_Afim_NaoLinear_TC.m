@@ -169,7 +169,7 @@ while (iteracoes<maxi)
 
      % Cálculo do Comprimento do Passo:
 
-    alfak2 = -transpose(dxk)*((gradientevpa - uk*inv(Xk)*transpose(e)))/((transpose(dxk)*(hessianavpa+uk*inv(Xk))*dxk));
+    alfak2 = -transpose(dxk)*((gradientevpa - uk*inv(Xk)*transpose(e)))/((transpose(dxk)*(hessianavpa+uk*inv(Xk*Xk))*dxk));
 
     alfak1 = min(-alfa*xk(dxk<0)./dxk(dxk<0));
 
@@ -206,4 +206,3 @@ while (iteracoes<maxi)
     iteracoes=iteracoes+1;
 
 end
-
