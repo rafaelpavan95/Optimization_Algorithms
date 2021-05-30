@@ -12,7 +12,7 @@ Algoritmos de Otimização
 
 ### [Método de Pontos Interiores Primal-Afim (Programação Quadrática)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_PPQ.m)
 
-### Método de Pontos Interiores Dual-Afim (Programação Quadrática)
+### [Método de Pontos Interiores Dual-Afim (Programação Quadrática)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Dual_Afim_PPQ.m)
 
 ### Método de Pontos Interiores Primal-Afim (Programação Não Linear)
 
