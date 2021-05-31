@@ -171,7 +171,7 @@ while(iteracoes<max)
 
      % Cálculo do Comprimento do Passo:
 
-    alfak2 = (-transpose(dxk)*(Q*xk+c-uk*inv(Xk)*transpose(e)))/(transpose(dxk)*(Q + (uk+1)*inv(Xk)*inv(Xk))*dxk);
+    alfak2 = (-transpose(dxk)*(Q*xk+c)/(transpose(dxk)*(Q)*dxk))xk;
 
     alfak1 = min(-alfa*xk(dxk<0)./dxk(dxk<0));
 
