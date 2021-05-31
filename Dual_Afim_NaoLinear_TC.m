@@ -1,3 +1,4 @@
+
 clc
 clear all
 
@@ -127,7 +128,10 @@ while(iteracoes<maxi)
    
    bk1 = min(-alfa*sk(dsk<0)./dsk(dsk<0));
    
-   bk2 = -transpose(dxk)*((gradientevpa+uk*transpose(A)*inv(Sk)*transpose(e)))/(transpose(dxk)*hessianavpa*dxk);
+   bk2 = -transpose(dxk)*((gradientevpa+uk*transpose(A)*inv(Sk)*transpose(e)))/(transpose(dxk)*(hessianavpa-uk*transpose(A)*inv(Sk*Sk)*transpose(e))*dxk);
+   % OU bk2 =
+   % -transpose(dxk)*((gradientevpa+uk*transpose(A)*inv(Sk)*transpose(e)))/(transpose(dxk)*(hessianavpa)*dxk);
+   % ?????????????????????????????????????
    
    if bk2<0
    
@@ -161,4 +165,3 @@ while(iteracoes<maxi)
    iteracoes=iteracoes+1;
 
 end
-
