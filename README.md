@@ -32,3 +32,6 @@ Algoritmos de Otimização
 
 ### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Quadrática) - Despacho Econômico (3 Geradores)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_PPQ_TC_Despacho.m)
 
+
+### [Método de Pontos Interiores Primal-Afim Barreira Logarítmica (Programação Quadrática) - Despacho Econômico (13 Geradores)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/Primal_Afim_PPQ_TC_Despacho_13.m)
+
