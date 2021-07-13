@@ -1,4 +1,4 @@
-% parâmetros de entrada
+% parÃ¢metros de entrada
 
 % caso de teste 1
 
@@ -109,13 +109,13 @@ bt=bt*at;
 
 alfa = at*pgt+bt;
 alfat = [alfat, alfa];
-% recalcula as potências com o novo alfa
+% recalcula as potÃªncias com o novo alfa
 
 for k=1:length(normal)
      pg(normal(k)) = (alfa-b(normal(k)))/a(normal(k));
 end
 
-% substitui potências pelos limites dos que ultrapassaram
+% substitui potÃªncias pelos limites dos que ultrapassaram
 
 for k=1:length(limitemin)
      pg(limitemin(k)) = pmin(limitemin(k));
@@ -130,10 +130,10 @@ PotenciasGeradas = [PotenciasGeradas;pg];
 end
 
 
-disp('Potências Geradas:')
+disp('PotÃªncias Geradas:')
 PotenciasGeradas
 
-% plota curva da potência dos geradores
+% plota curva da potÃªncia dos geradores
 figure
 for g=1:length(pg)
 plot(demanda,PotenciasGeradas(:,g),'-x')
@@ -142,8 +142,8 @@ end
 hold off
 grid on
 grid minor
-title('Gráfico de Potência Gerada x Demanda')
-ylabel('Potência Gerada por Cada Gerador [MW]')
+title('GrÃ¡fico de PotÃªncia Gerada x Demanda')
+ylabel('PotÃªncia Gerada por Cada Gerador [MW]')
 xlabel('Demanda [MW]')
 
 
