@@ -1,5 +1,5 @@
 # Optimization_Algorithms
-Algoritmos de Otimização
+## Algoritmos de Otimização
 
 
 ### [Algoritmo de Newton-Raphson (Resolução de Fluxo de Carga)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/newton-raphson.m)
