@@ -1,76 +1,76 @@
-% Matriz de Impedâncias Série
+% Matriz de ImpedÃ¢ncias SÃ©rie
 
 Zkm = [0 (0.2 + 0.4i) (0.2 + 0.4i);(0.2 +0.4i) 0 (0.1 + 0.2i); (0.2+0.4i) (0.1+0.2i) 0 ];
 
-% Vetor de Susceptâncias Shunt
+% Vetor de SusceptÃ¢ncias Shunt
 
 Bsh = imag([0, 0.01i, 0.01i; 0.01i, 0, 0.01i; 0.01i, 0.01i,0]);
 
-% Calculando a Matriz de Admitâncias
+% Calculando a Matriz de AdmitÃ¢ncias
 
 Ykm = 1./Zkm;
 
-% Separando o Vetor de Admitâncias em Dois Vetores: Condutâncias [Gkm] e
-% Susceptâncias [Ykm]
+% Separando o Vetor de AdmitÃ¢ncias em Dois Vetores: CondutÃ¢ncias [Gkm] e
+% SusceptÃ¢ncias [Ykm]
 
 Gkm = real(Ykm);
 
 Bkm = imag(Ykm);
 
-% Criando as Variáveis Simbólicas (Incógnitas)
+% Criando as VariÃ¡veis SimbÃ³licas (IncÃ³gnitas)
 
 syms V2 fi2 fi3 Pg1 Qg1 Qg3;
 
 incognitas = [V2, fi2, fi3];
 
-% Criando Vetor de Ângulos
+% Criando Vetor de Ã‚ngulos
 
 fi = [0, fi2, fi3];
 
-% Criando Vetor de Tensões
+% Criando Vetor de TensÃµes
 
 V = [1.05, V2, 1];
 
-% Criando Vetor de Potências Geradas
+% Criando Vetor de PotÃªncias Geradas
 
 Pg = [Pg1, 0, 0.3];
 Qg = [Qg1, 0, Qg3];
 
-% Criando Vetor de Potências Consumidas
+% Criando Vetor de PotÃªncias Consumidas
 
 Pc = [0, 0.5, 0];
 Qc = [0, 0.2, 0];
 
-%Define Número Total de Barras
+%Define NÃºmero Total de Barras
 
 nbarras = [3];
 
-% Define Quais são Barras de Geração
+% Define Quais sÃ£o Barras de GeraÃ§Ã£o
 
 bger = [3];
 
-% Define Quais são Barras de Carga
+% Define Quais sÃ£o Barras de Carga
 
 bcarga = [2];
 
-% Define Qual a Barra de Referência
+% Define Qual a Barra de ReferÃªncia
 
 bref= [1];
 
-% Inicializa a variável que vai armazenar as equaçãoes
+% Inicializa a variÃ¡vel que vai armazenar as equaÃ§Ã£oes
 
 eqqc = sym(zeros(1,numel(bcarga)));
 eqpc = sym(zeros(1,numel(bcarga)));
 eqpg = sym(zeros(1,numel(bger)));
 
-% Inicializa Variáveis de Controle dos Loops
+% Inicializa VariÃ¡veis de Controle dos Loops
 
 k=1;
 j=1;
 l=1;
 m=1;
 
-% Equações Barras de Carga
+% EquaÃ§Ãµes Barras de Carga
 
 for j=1:numel(bcarga)  
     
@@ -93,7 +93,7 @@ for j=1:numel(bcarga)
 end
 
 
-% Equações Barras de Geração
+% EquaÃ§Ãµes Barras de GeraÃ§Ã£o
 
 for l=1:numel(bger)
     
@@ -112,27 +112,27 @@ for l=1:numel(bger)
 
 end
 
-% Salva as Equações em um Vetor 
+% Salva as EquaÃ§Ãµes em um Vetor 
 
 equations = [eqpc, eqqc, eqpg]
 
 
-% Script para Resolver o Sistema Não-Linear de N Equações pelo Método de Newton
+% Script para Resolver o Sistema NÃ£o-Linear de N EquaÃ§Ãµes pelo MÃ©todo de Newton
 
-% Parâmetros necessários: Vetor de Equações, Vetor de Valores Iniciais e
-% Vetor de Incógnitas
+% ParÃ¢metros necessÃ¡rios: Vetor de EquaÃ§Ãµes, Vetor de Valores Iniciais e
+% Vetor de IncÃ³gnitas
 
 equations = [eqpc, eqqc, eqpg];
 incognitas = [V2, fi2, fi3];
 vetordevalores = [1, 1, 1];
 
-% Inicializa Variáveis de Controle dos Loops
+% Inicializa VariÃ¡veis de Controle dos Loops
 
 iteracoes = 1;
 t=1;
 u=1;
 
-% Realiza Cálculo da Matriz Jacobiana com as Equações
+% Realiza CÃ¡lculo da Matriz Jacobiana com as EquaÃ§Ãµes
 
 for t = 1:length(equations)
  
@@ -143,7 +143,7 @@ for t = 1:length(equations)
        end
 end
 
-% Substitui o vetor de valores iniciais nas equações
+% Substitui o vetor de valores iniciais nas equaÃ§Ãµes
 
 F = vpa(subs(equations, incognitas, vetordevalores));
 
@@ -151,14 +151,14 @@ F = vpa(subs(equations, incognitas, vetordevalores));
 
 error(iteracoes)=max(abs(F));
 
-% Enquanto a Norma Infinito for Superior ao Critério de Parada
+% Enquanto a Norma Infinito for Superior ao CritÃ©rio de Parada
 % Estabelecido, Realiza o Procedimento Abaixo
 
 while(error(iteracoes)>0.00001)
     
     iteracoes=iteracoes+1;
 
-    % Calcula a Matriz Jacobiana e Sua Inversa, e Múltiplica por -1
+    % Calcula a Matriz Jacobiana e Sua Inversa, e MÃºltiplica por -1
     
     Jsub = -1*vpa(subs(J, incognitas, vetordevalores));
     IJsub = inv(Jsub);
@@ -168,7 +168,7 @@ while(error(iteracoes)>0.00001)
     F = vpa(subs(equations, incognitas, vetordevalores));
     error(iteracoes)=max(abs(F));
     
-    % Calcula o Vetor de Acréscimo
+    % Calcula o Vetor de AcrÃ©scimo
     
     dx=IJsub*transpose(F);
     
@@ -178,25 +178,25 @@ while(error(iteracoes)>0.00001)
     
 end
  
-% Realiza a Plotagem do Gráfico com o Valor da Norma Infinito para Cada
-% Iteração
+% Realiza a Plotagem do GrÃ¡fico com o Valor da Norma Infinito para Cada
+% IteraÃ§Ã£o
 
 plot(1:iteracoes,error);
  
-title('Método de Newton - Sistema Não-Linear - ||F(x)|| - Norma Infinito');
-xlabel('Número da Iteração');
+title('MÃ©todo de Newton - Sistema NÃ£o-Linear - ||F(x)|| - Norma Infinito');
+xlabel('NÃºmero da IteraÃ§Ã£o');
 ylabel('Valor da Norma');
 grid on;
 grid minor;
 
-% Solução do Sistema
+% SoluÃ§Ã£o do Sistema
 
 v2=resultado(1)
 fi2=resultado(2)
 fi3=resultado(3)
 
-% Script para Calcular o Fluxo de Potência Ativa e Reativa Entre as Barras
-% Necessita dos Vetores de Tensões e Ângulos de Fase como Parâmetros
+% Script para Calcular o Fluxo de PotÃªncia Ativa e Reativa Entre as Barras
+% Necessita dos Vetores de TensÃµes e Ã‚ngulos de Fase como ParÃ¢metros
 
 VN = subs(V, [incognitas(1)],[resultado(1)])
 fin = subs(fi, [incognitas(2),incognitas(3)],[resultado(2),resultado(3)])
@@ -272,7 +272,7 @@ perdas32 = perdasnalinha(3,2)
 
 perdastotais = perdas12+perdas13+perdas32
 
-% Calcula as Potências Ativas e Reativas Geradas na Barra 1, e a Potência
+% Calcula as PotÃªncias Ativas e Reativas Geradas na Barra 1, e a PotÃªncia
 % Reativa Gerada na Barra 3
 
 PG1=vpa(-((Pg(2)+Pg(3)) - (Pc(1)+Pc(2)+Pc(3)) - real((perdasnalinha(1,2)+perdasnalinha(1,3)+perdasnalinha(3,2)))))
@@ -281,12 +281,12 @@ QG1=vpa(-(-Qc(1)-Qeq(1,2)-Qeq(1,3)))
 
 QG3=vpa(-(-Qc(3)-Qeq(3,1)-Qeq(3,2)))
 
-% Novos Vetores de Potências Geradas nas Barras
+% Novos Vetores de PotÃªncias Geradas nas Barras
 
 PgN = subs(Pg,Pg(1),PG1);
 QgN = subs(Qg,[Qg(1),Qg(3)],[QG1,QG3]);
 
-% Cálculo do Balanço de Potência Aparente nas Barras
+% CÃ¡lculo do BalanÃ§o de PotÃªncia Aparente nas Barras
 
 SbalancoB3 = round(PgN(3)+QgN(3)*i-(Pc(3)+Qc(3)*i+Peq(3,1)+Peq(3,2)+Qeq(3,1)*i+Qeq(3,2)*i))
 
