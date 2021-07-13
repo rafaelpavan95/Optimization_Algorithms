@@ -13,7 +13,7 @@ demanda = [250 350 500 700 900 1100 1175 1250];
  
 TESTE = 1;
  
-% parâmetros de entrada
+% parÃ¢metros de entrada
  
 % caso de teste 1
  
@@ -51,7 +51,7 @@ B = [8.383183 -0.049448 0.375082; -0.049448 5.9635668 0.194971; 0.375082 0.19497
  
 end
  
-% Passo 2 - Calcula Preço Inicial
+% Passo 2 - Calcula PreÃ§o Inicial
  
 % calcular at, bt e alfa
  
@@ -140,13 +140,13 @@ bt=bt*at;
  
 alfa = at*pgt+bt;
 alfat = [alfat, alfa];
-% recalcula as potências com o novo alfa
+% recalcula as potÃªncias com o novo alfa
  
 for k=1:length(normal)
      pg(normal(k)) = (alfa-b(normal(k)))/a(normal(k));
 end
  
-% substitui potências pelos limites dos que ultrapassaram
+% substitui potÃªncias pelos limites dos que ultrapassaram
  
 for k=1:length(limitemin)
      pg(limitemin(k)) = pmin(limitemin(k));
@@ -164,7 +164,7 @@ vetor = [];
  
 demanda2 = demanda(i);
  
-% Passo 3 - Calcula Matriz e Potências para o Preço Inicial
+% Passo 3 - Calcula Matriz e PotÃªncias para o PreÃ§o Inicial
  
 for linha=1:length(a)
  
@@ -245,13 +245,13 @@ if TESTE==2
 end
 
         
-% Passo 4 - Cálculo das Perdas
+% Passo 4 - CÃ¡lculo das Perdas
  
 pp = [pgeradas 1];
  
 perdas = pp*B*transpose(pp);
  
-% Passo 5 - Cálculo do mismatch de potência ativa e Critério de Parada
+% Passo 5 - CÃ¡lculo do mismatch de potÃªncia ativa e CritÃ©rio de Parada
  
 DELTAP = sum(pgeradas) - demanda2/Pbase - perdas;
  
@@ -395,15 +395,15 @@ custoincrementaldepotencia = custosincrementaisdeger(1)*fatordepenalidade(1);
  
 display('Para a Demanda [pu] de:')
 display(demanda2/Pbase)
-display('Potências Geradas [pu] de:')
+display('PotÃªncias Geradas [pu] de:')
 display(pgr)
 display('Perdas [pu] de:')
 display(perds)
-display('Custo Incremental de Potência [$/MW]:')
+display('Custo Incremental de PotÃªncia [$/MW]:')
 display(custoincrementaldepotencia)
 display('Fatores de Penalidade:')
 display(fatordepenalidade)
-display('Custos Incrementais de Geração [$/MWh]:')
+display('Custos Incrementais de GeraÃ§Ã£o [$/MWh]:')
 display(custosincrementaisdeger)
  
 cip = [cip,custoincrementaldepotencia];
@@ -417,7 +417,7 @@ figure
  
 subplot(2,2,1)
 plot(demanda,perdasf);
-title('Gráfico de Perdas por Demanda')
+title('GrÃ¡fico de Perdas por Demanda')
 xlabel('Demanda [MW]')
 ylabel('Perdas [MW]')
 grid on
@@ -425,7 +425,7 @@ grid minor
  
 subplot(2,2,2)
 plot(demanda,cip);
-title('Gráfico de Custo Incremental de Potência por Demanda')
+title('GrÃ¡fico de Custo Incremental de PotÃªncia por Demanda')
 xlabel('Demanda [MW]')
 ylabel('CIP [$/MW]')
 ylim([0 15])
@@ -443,7 +443,7 @@ for ay=1:cigdim(2)
  
 end
  
-title('Gráfico de Custo Incremental de Geração por Demanda')
+title('GrÃ¡fico de Custo Incremental de GeraÃ§Ã£o por Demanda')
 xlabel('Demanda [MW]')
 ylabel('CIG [$/MWh]')
 grid on
@@ -467,9 +467,9 @@ for ay=1:cigdim(2)
  
 end
  
-title('Gráfico de Potência Gerada por Demanda Para Cada Gerador')
+title('GrÃ¡fico de PotÃªncia Gerada por Demanda Para Cada Gerador')
 xlabel('Demanda [MW]')
-ylabel('Potência Gerada [MW]')
+ylabel('PotÃªncia Gerada [MW]')
 grid on
 grid minor
  
