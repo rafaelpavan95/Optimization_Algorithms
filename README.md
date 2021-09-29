@@ -1,6 +1,8 @@
 # Optimization_Algorithms
-## Algoritmos de Otimização
+## Algoritmos Exatos de Otimização
+- - - - - - - - - - - - - - - - - - -
 
+Este repositório contém algoritmos desenvolvidos em linguagem Python e Matlab para resolução de problemas de programação linear e não linear.
 
 ### [Algoritmo de Newton-Raphson (Resolução de Fluxo de Carga)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/newton-raphson.m)
 
