@@ -2,7 +2,7 @@
 ## Algoritmos Exatos de Otimização
 - - - - - - - - - - - - - - - - - - -
 
-Este repositório contém algoritmos desenvolvidos em linguagem Python e Matlab para resolução de problemas de programação linear e não linear inteiro-mistos. Tais algoritmos fazem uso de gradiente/jacobiana/hessiana.
+Este repositório contém algoritmos desenvolvidos em linguagem Python, Matlab e Julia para resolução de problemas de programação linear e não linear inteiro-mistos. Tais algoritmos fazem uso de gradiente/jacobiana/hessiana.
 
 ### [Algoritmo de Newton-Raphson (Resolução de Fluxo de Carga)](https://github.com/rafaelpavan95/Optimization_Algorithms/blob/main/newton-raphson.m)
 
